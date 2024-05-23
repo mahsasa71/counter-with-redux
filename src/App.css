@@ -1,38 +1,60 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #13162b;
+  display: grid;
+  place-items: center;
+}
+.container {
+  position: relative;
+  width: 80vmin;
+  background-color: #191c37;
+  padding: 100px 40px;
+  border-radius: 9px;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+}
+.container:after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  left: 7.5%;
+  height: 120%;
+  bottom: -10%;
+  background-color: #0087ff;
+  z-index: -1;
+  border-radius: 8px;
+}
+h1 {
   text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 80px;
+  color: #ffffff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btns {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  margin-top: 80px;
 }
-
-.App-link {
-  color: #61dafb;
+.btns button {
+  width: 130px;
+  padding: 15px 0;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.inc,
+button.dec {
+  background-color: #0087ff;
+  color: #ffffff;
+}
+button.reset {
+  background-color: transparent;
+  border: 4px solid #0087ff;
+  color: #0087ff;
 }
